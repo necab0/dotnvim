@@ -7,4 +7,6 @@ call plug#begin('~/.nvim/plugged')
     Plug 'vim-syntastic/syntastic'          " syntax checking
     Plug 'wagnerf42/vim-clippy'             " rust clippy
     Plug 'tpope/vim-surround'               " block wrapping
+    Plug 'SirVer/ultisnips'                 " snippet functionality
+    Plug 'honza/vim-snippets'               " snippet repository
 call plug#end()
