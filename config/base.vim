@@ -33,3 +33,5 @@ nnoremap <silent> <Leader>/ :nohlsearch<CR>
 
 set background=dark
 silent! colorscheme PaperColor
+
+set pastetoggle=<F3>
