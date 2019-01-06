@@ -23,4 +23,4 @@ cd .nvim && ./install.sh
 | <kbd>F2</kbd> | open file browser (nerd tree) |
 | <kbd>F3</kbd> | toggle paste mode             |
 | <kbd>F4</kbd> | open fuzzy find               |
-| <kbd>F5</kbd> | open tag bar                  |
+| <kbd>F5</kbd> | toggle tag bar                |
