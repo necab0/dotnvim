@@ -10,6 +10,7 @@ call plug#begin('~/.nvim/plugged')
     Plug 'honza/vim-snippets'                                           " snippet repository
     Plug 'jiangmiao/auto-pairs'                                         " brackets auto-closing
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }   " fzf binary
+    Plug 'junegunn/fzf.vim'                                             " fzf vim utils
     Plug 'tpope/vim-commentary'                                         " bulk commenting
     Plug 'rust-lang/rust.vim'                                           " lots of neat rust features
     Plug 'ludovicchabant/vim-gutentags'                                 " tag file management
