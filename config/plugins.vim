@@ -9,4 +9,5 @@ call plug#begin('~/.nvim/plugged')
     Plug 'tpope/vim-surround'               " block wrapping
     Plug 'SirVer/ultisnips'                 " snippet functionality
     Plug 'honza/vim-snippets'               " snippet repository
+    Plug 'jiangmiao/auto-pairs'             " brackets auto-closing
 call plug#end()
