@@ -6,4 +6,5 @@ call plug#begin('~/.nvim/plugged')
     Plug 'tpope/vim-fugitive'               " git integration
     Plug 'vim-syntastic/syntastic'          " syntax checking
     Plug 'wagnerf42/vim-clippy'             " rust clippy
+    Plug 'tpope/vim-surround'               " block wrapping
 call plug#end()
