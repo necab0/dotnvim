@@ -3,6 +3,7 @@
 ## Install
 
 Requirements:
+- python-neovim
 - git
 - curl
 - ripgrep
