@@ -23,9 +23,9 @@ echo
 if [[ $REPLY =~ ^[Yy]$ ]]; then
     rm -rf $NVIM
     ln -s $DOTNVIM $NVIM
+    # install all plugins
+    echo "Installing plugins. This may take a while."
+    nvim --headless +PlugInstall +qa
+    echo "Done."
 fi
 
-# install all plugins
-echo "Installing plugins. This may take a while."
-nvim --headless +PlugInstall +qa
-echo "Done."
