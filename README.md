@@ -8,6 +8,12 @@ Requirements:
 - curl
 - ripgrep
 - exuberant-ctags
+- patched font that includes Font Awesome
+
+Optional:
+- cargo-clippy (pedantic Rust linter)
+- flake8 (Python PEP8 linter)
+- isort (Python import sorting)
 
 ```bash
 cd ~
@@ -24,4 +30,5 @@ cd .nvim && ./install.sh
 | <kbd>F2</kbd> | open file browser (nerd tree) |
 | <kbd>F3</kbd> | toggle paste mode             |
 | <kbd>F4</kbd> | open fuzzy find               |
-| <kbd>F5</kbd> | toggle tag bar                |
+| <kbd>F5</kbd> | open LSP actions              |
+| <kbd>F6</kbd> | toggle tag bar                |

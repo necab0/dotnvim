@@ -29,6 +29,7 @@ let mapleader = ","
 noremap <leader>ev :vs $MYVIMRC<CR>
 noremap <leader>sv :source $MYVIMRC<CR>
 
+" remove highlighting of previous search results
 nnoremap <silent> <Leader>/ :nohlsearch<CR>
 
 set background=dark
