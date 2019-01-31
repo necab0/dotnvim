@@ -11,7 +11,9 @@ Requirements:
 - patched font that includes Font Awesome
 
 Optional:
+- rls (Rust Language Server for completions and more)
 - cargo-clippy (pedantic Rust linter)
+- pyls (Python Language Server for completions and more)
 - flake8 (Python PEP8 linter)
 - isort (Python import sorting)
 

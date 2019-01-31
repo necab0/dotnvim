@@ -128,7 +128,8 @@ nmap <F6> :TagbarToggle<CR>
 " LanguageClient-neovim
 set hidden
 let g:LanguageClient_serverCommands = {
-    \ 'rust': ['rls']
+    \ 'rust': ['rls'],
+    \ 'python': ['pyls']
     \ }
 let g:LanguageClient_diagnosticsEnable = 0
 
