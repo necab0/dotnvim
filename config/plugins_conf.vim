@@ -38,7 +38,9 @@ let g:lightline = {
     \   'active': {
     \     'left': [ [ 'mode', 'paste' ],
     \               [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
-    \     'right': [ [ 'linter_ok', 'linter_checking', 'linter_errors', 'linter_warnings', 'lineinfo' ], [ 'percent' ], [ 'fileformat', 'fileencoding', 'filetype' ] ],
+    \     'right': [ [ 'linter_ok', 'linter_checking', 'linter_errors', 'linter_warnings', 'lineinfo' ],
+    \                [ 'percent' ],
+    \                [ 'fileformat', 'fileencoding', 'filetype' ] ],
     \   },
     \   'component_expand': {
     \     'linter_ok': 'lightline#ale#ok',
@@ -48,6 +50,8 @@ let g:lightline = {
     \   },
     \   'component_function': {
     \     'gitbranch': 'LightLineFugitive',
+    \     'fileformat': 'LightLineFileformat',
+    \     'filetype': 'LightLineFiletype',
     \   },
     \   'component_type': {
     \     'linter_ok': 'left',
@@ -60,6 +64,14 @@ let g:lightline = {
 function! LightLineFugitive()
     let _ = fugitive#head()
     return strlen(_) ? "\uf126 "._ : ""
+endfunction
+
+function! LightLineFileformat()
+    return winwidth(0) > 70 ? &fileformat : ''
+endfunction
+
+function! LightLineFiletype()
+    return winwidth(0) > 70 ? (&filetype !=# '' ? &filetype : 'no ft') : ''
 endfunction
 
 let g:lightline#ale#indicator_warnings = "\uf071"
