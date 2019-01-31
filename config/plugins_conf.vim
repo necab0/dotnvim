@@ -58,7 +58,8 @@ let g:lightline = {
     \ }
 
 function! LightLineFugitive()
-  return "\uf126 ".fugitive#head()
+    let _ = fugitive#head()
+    return strlen(_) ? "\uf126 "._ : ""
 endfunction
 
 let g:lightline#ale#indicator_warnings = "\uf071"
