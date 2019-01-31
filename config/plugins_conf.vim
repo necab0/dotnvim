@@ -47,7 +47,7 @@ let g:lightline = {
     \     'linter_errors': 'lightline#ale#errors',
     \   },
     \   'component_function': {
-    \     'gitbranch': 'fugitive#head',
+    \     'gitbranch': 'LightLineFugitive',
     \   },
     \   'component_type': {
     \     'linter_ok': 'left',
@@ -56,6 +56,11 @@ let g:lightline = {
     \     'linter_errors': 'error',
     \   },
     \ }
+
+function! LightLineFugitive()
+  return "\uf126 ".fugitive#head()
+endfunction
+
 let g:lightline#ale#indicator_warnings = "\uf071"
 let g:lightline#ale#indicator_errors = "\uf00d"
 let g:lightline#ale#indicator_checking = "\uf110"
