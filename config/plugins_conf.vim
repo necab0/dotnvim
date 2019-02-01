@@ -95,7 +95,7 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 let g:ale_sign_error = "\uf00d"
 let g:ale_sign_warning = "\uf071"
 let g:ale_fixers = {
-\ 'python': ['isort'],
+\ 'python': ['isort', 'remove_trailing_lines', 'trim_whitespace'],
 \ }
 let g:ale_fix_on_save = 1
 "
