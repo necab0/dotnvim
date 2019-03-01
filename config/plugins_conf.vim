@@ -140,5 +140,6 @@ let g:LanguageClient_serverCommands = {
     \ 'python': ['pyls']
     \ }
 let g:LanguageClient_diagnosticsEnable = 0
+let g:LanguageClient_hasSnippetSupport = 0
 
 nnoremap <F5> :call LanguageClient_contextMenu()<CR>
