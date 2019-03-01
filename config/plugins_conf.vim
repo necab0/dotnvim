@@ -1,36 +1,26 @@
-" tabnine (based on YouCompleteMe)
-" let g:ycm_autoclose_preview_window_after_insertion = 1
-"
-" -----------------------------------------------------------------------------
-"
-" ncm2
-" enable ncm2 for all buffers
-autocmd BufEnter * call ncm2#enable_for_buffer()
-set completeopt=noinsert,menuone,noselect
-
+" deoplete
+let g:deoplete#enable_at_startup = 1
+" autoclose preview window
+autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 " When the <Enter> key is pressed while the popup menu is visible, it only
 " hides the menu. Use this mapping to close the menu and also start a new
 " line.
 inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
-
 " Use <TAB> to select the popup menu:
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
 " suppress the annoying 'match x of y', 'The only match' and 'Pattern not
 " found' messages
 set shortmess+=c
 "
 " -----------------------------------------------------------------------------
 "
-" airline
-" let g:airline_powerline_fonts = 1
-" let g:airline_theme='dark'
+" echodoc
+let g:echodoc#enable_at_startup = 1
 "
 " -----------------------------------------------------------------------------
 "
 " lightline
-set laststatus=2
 set noshowmode  " disable default mode information
 
 " with lightline-ale
@@ -81,13 +71,7 @@ let g:lightline#ale#indicator_ok = "\uf00c"
 "
 " -----------------------------------------------------------------------------
 "
-" syntastic
-" let g:syntastic_rust_checkers = ['clippy']
-"
-" -----------------------------------------------------------------------------
-"
 " ale
-" might wanna replace the errors and warnings with fa icons at some point
 let g:ale_rust_cargo_use_clippy = executable('cargo-clippy')
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
@@ -98,13 +82,7 @@ let g:ale_fixers = {
 \ 'python': ['isort', 'remove_trailing_lines', 'trim_whitespace'],
 \ }
 let g:ale_fix_on_save = 1
-"
-" -----------------------------------------------------------------------------
-"
-" ultisnips
-let g:UltiSnipsExpandTrigger = "<C-j>"
-let g:UltiSnipsJumpForwardTrigger = "<C-j>"
-let g:UltiSnipsJumpBackwardTrigger = "<C-k>"
+let g:ale_set_highlights = 0
 "
 " -----------------------------------------------------------------------------
 "
@@ -129,11 +107,6 @@ command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-h
 "
 " rust.vim
 let g:rustfmt_autosave = 1
-"
-" -----------------------------------------------------------------------------
-"
-" vim-gutentags
-" let g:gutentags_ctags_extra_args = ['--fields=+1']  " required by YouCompleteMe
 "
 " -----------------------------------------------------------------------------
 "
