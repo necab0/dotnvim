@@ -22,10 +22,12 @@ read -p "Proceed? " -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]; then
     rm -rf $NVIM
+    rm ~/.local/share/nvim/rplugin.vim
     ln -s $DOTNVIM $NVIM
     # install all plugins
     echo "Installing plugins. This may take a while."
-    nvim --headless +PlugInstall +qa
+    nvim --headless +PlugInstall +UpdateRemotePlugins +qa
+    echo
     echo "Done."
 fi
 

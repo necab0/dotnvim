@@ -6,11 +6,9 @@ call plug#begin('~/.nvim/plugged')
     " Plug 'vim-syntastic/syntastic'                                      " syntax checking
     Plug 'w0rp/ale'                                                     " linting
     Plug 'maximbaz/lightline-ale'                                       " ale lightline integration
-    " TODO: test this!
     Plug 'tpope/vim-surround'                                           " block wrapping
-    " Plug 'SirVer/ultisnips'                                             " snippet functionality
-    " Plug 'honza/vim-snippets'                                           " snippet repository
-    " TODO: add snippet support
+    Plug 'Shougo/neosnippet.vim'                                        " snippet functionality
+    Plug 'honza/vim-snippets'                                           " snippet repository
     Plug 'jiangmiao/auto-pairs'                                         " brackets auto-closing
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }   " fzf binary
     Plug 'junegunn/fzf.vim'                                             " fzf vim utils
@@ -19,12 +17,12 @@ call plug#begin('~/.nvim/plugged')
     Plug 'ludovicchabant/vim-gutentags'                                 " tag file management
     Plug 'scrooloose/nerdtree'                                          " file browsing
     Plug 'majutsushi/tagbar'                                            " tag browsing
-    Plug 'aurieh/discord.nvim', { 'do': ':UpdateRemotePlugins'}         " discord rich presence
+    Plug 'aurieh/discord.nvim'                                          " discord rich presence
 
     " Language Server Protocol (LSP)
     Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
     \ }
-    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }       " completion support
+    Plug 'Shougo/deoplete.nvim'                                         " completion support
 call plug#end()

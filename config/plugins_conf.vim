@@ -85,6 +85,18 @@ let g:ale_fix_on_save = 1
 let g:ale_set_highlights = 0
 "
 " -----------------------------------------------------------------------------
+"  neosnippet
+let g:neosnippet#disable_runtime_snippets = {
+        \   '_' : 1,
+        \ }
+let g:neosnippet#snippets_directory='~/.config/nvim/plugged/vim-snippets/snippets'
+" Plugin key-mappings.
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+"
+" -----------------------------------------------------------------------------
 "
 " fzf
 let $FZF_DEFAULT_COMMAND = "rg --files --no-ignore --hidden --follow --glob '!*/.git/*'"
