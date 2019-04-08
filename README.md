@@ -20,7 +20,7 @@ Optional:
 ```bash
 cd ~
 mv .config/nvim .config/nvim.bak  # backup current neovim configuration if present
-git clone https://github.com/necab0/dotnvim.git .nvim
+git clone https://github.com/necabo/dotnvim.git .nvim
 cd .nvim && ./install.sh
 ```
 
