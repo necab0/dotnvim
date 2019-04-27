@@ -1,7 +1,7 @@
-" deoplete
-let g:deoplete#enable_at_startup = 1
-" autoclose preview window
-autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+" ncm2
+autocmd BufEnter * call ncm2#enable_for_buffer()
+" IMPORTANT: :help Ncm2PopupOpen for more information
+set completeopt=noinsert,menuone,noselect
 " When the <Enter> key is pressed while the popup menu is visible, it only
 " hides the menu. Use this mapping to close the menu and also start a new
 " line.

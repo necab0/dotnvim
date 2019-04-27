@@ -4,6 +4,7 @@
 
 Requirements:
 - python-neovim
+- neovim-nightly (required for floating windows coming in 0.4)
 - git
 - curl
 - ripgrep

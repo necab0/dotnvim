@@ -24,5 +24,9 @@ call plug#begin('~/.nvim/plugged')
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
     \ }
-    Plug 'Shougo/deoplete.nvim'                                         " completion support
+    Plug 'ncm2/ncm2'                                                    " completion support
+    Plug 'roxma/nvim-yarp'
+    Plug 'ncm2/ncm2-bufword'
+    Plug 'ncm2/ncm2-path'
+    Plug 'ncm2/float-preview.nvim'                                      " floating window support
 call plug#end()
