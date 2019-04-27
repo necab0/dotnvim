@@ -92,9 +92,9 @@ let g:neosnippet#disable_runtime_snippets = {
 let g:neosnippet#snippets_directory='~/.config/nvim/plugged/vim-snippets/snippets'
 " Plugin key-mappings.
 " Note: It must be "imap" and "smap".  It uses <Plug> mappings.
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
+imap <C-j>     <Plug>(neosnippet_expand_or_jump)
+smap <C-j>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-j>     <Plug>(neosnippet_expand_target)
 "
 " -----------------------------------------------------------------------------
 "
@@ -140,6 +140,7 @@ let g:LanguageClient_serverCommands = {
     \ 'python': ['pyls']
     \ }
 let g:LanguageClient_diagnosticsEnable = 0
+" disable snippet support for completions
 let g:LanguageClient_hasSnippetSupport = 0
 
 nnoremap <F5> :call LanguageClient_contextMenu()<CR>
