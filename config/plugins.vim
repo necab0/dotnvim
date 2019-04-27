@@ -3,7 +3,6 @@ call plug#begin('~/.nvim/plugged')
     Plug 'NLKNguyen/papercolor-theme'                                   " eye-friendly colorscheme
     Plug 'itchyny/lightline.vim'                                        " status bar
     Plug 'tpope/vim-fugitive'                                           " git integration
-    " Plug 'vim-syntastic/syntastic'                                      " syntax checking
     Plug 'w0rp/ale'                                                     " linting
     Plug 'maximbaz/lightline-ale'                                       " ale lightline integration
     Plug 'tpope/vim-surround'                                           " block wrapping
@@ -16,7 +15,6 @@ call plug#begin('~/.nvim/plugged')
     Plug 'rust-lang/rust.vim'                                           " lots of neat rust features
     Plug 'ludovicchabant/vim-gutentags'                                 " tag file management
     Plug 'scrooloose/nerdtree'                                          " file browsing
-    Plug 'majutsushi/tagbar'                                            " tag browsing
     Plug 'aurieh/discord.nvim'                                          " discord rich presence
 
     " Language Server Protocol (LSP)

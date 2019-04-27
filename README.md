@@ -34,4 +34,4 @@ cd .nvim && ./install.sh
 | <kbd>F3</kbd> | toggle paste mode             |
 | <kbd>F4</kbd> | open fuzzy find               |
 | <kbd>F5</kbd> | open LSP actions              |
-| <kbd>F6</kbd> | toggle tag bar                |
+| <kbd>F6</kbd> | LSP rename action             |

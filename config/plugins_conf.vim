@@ -127,13 +127,8 @@ noremap <F2> :NERDTreeToggle<CR>
 "
 " -----------------------------------------------------------------------------
 "
-" tagbar
-let g:tagbar_autofocus = 1
-nmap <F6> :TagbarToggle<CR>
-"
-" -----------------------------------------------------------------------------
-"
 " LanguageClient-neovim
+" Required for operations modifying multiple buffers like rename.
 set hidden
 let g:LanguageClient_serverCommands = {
     \ 'rust': ['rls'],
@@ -143,4 +138,13 @@ let g:LanguageClient_diagnosticsEnable = 0
 " disable snippet support for completions
 let g:LanguageClient_hasSnippetSupport = 0
 
-nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+function! LC_maps()
+  if has_key(g:LanguageClient_serverCommands, &filetype)
+    nnoremap <silent> <F5> :call LanguageClient_contextMenu()<CR>
+    nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
+    nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+    nnoremap <silent> <F6> :call LanguageClient_textDocument_rename()<CR>
+  endif
+endfunction
+
+autocmd FileType * call LC_maps()
